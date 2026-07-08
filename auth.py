@@ -20,6 +20,7 @@ def create_users_table():
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT,
         video_name TEXT,
+        transcript TEXT,
         summary TEXT
     )
     """)
@@ -61,6 +62,7 @@ def signup_user(username, password):
 
         return False
 
+
 def login_user(username, password):
 
     conn = sqlite3.connect("users.db")
@@ -79,6 +81,7 @@ def login_user(username, password):
     conn.close()
 
     return data
+
 
 def save_history(username, video_name, transcript, summary):
 
@@ -105,7 +108,6 @@ def save_history(username, video_name, transcript, summary):
     conn.close()
 
 
-
 def get_history(username):
 
     conn = sqlite3.connect("users.db")
@@ -126,6 +128,8 @@ def get_history(username):
     conn.close()
 
     return data
+
+
 def get_single_history(history_id):
 
     conn = sqlite3.connect("users.db")
