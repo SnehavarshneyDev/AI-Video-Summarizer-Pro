@@ -1,14 +1,10 @@
 streamlit
 openai-whisper
-transformers
-torch
+transformers==4.41.2
+torch==2.3.1
 moviepy==1.0.3
 imageio-ffmpeg
 yt-dlp
 deep-translator
 python-dotenv
 sentencepiece
-tokenizers
-accelerate
-protobuf
-safetensors
